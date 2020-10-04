@@ -22,6 +22,10 @@ password 입력 후 create database DB이름;
 QueryFailedError: cnst.consrc 칼럼 없음 at new QueryFailedError
 -> typeorm 버전을 0.2.21로 올려서 해결
 
-# Part 0
+# Part 1
 
 사용자를 만들때마다 자동으로 uuid를 생성
+
+# Part 2
+
+users 테이블에 email, password를 mutation함
