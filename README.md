@@ -40,3 +40,8 @@ yarn test 할 때 securityerror: localstorage is not available for opaque origin
 NODE_ENV'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
 배치 파일이 아닙니다
 -> cross-env package 설치 후 package.json의 scripts에서 "test-server": "cross-env NODE_ENV=test ts-node src/index.ts"로 변경
+
+# Part 5
+
+Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
+-> package.json의 scripts에서 "test": "cross-env NODE_ENV=test jest --detectOpenHandles"로 변경
