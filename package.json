@@ -7,6 +7,7 @@
     "@types/jest": "22.2.3",
     "@types/node": "9.6.6",
     "@types/uuid": "3.4.3",
+    "cross-env": "5.2.0",
     "gql2ts": "1.7.2",
     "jest": "24.9.0",
     "nodemon": "1.17.3",
@@ -27,8 +28,9 @@
     "uuid": "3.2.1"
   },
   "scripts": {
-    "start": "nodemon --exec ts-node src/index.ts",
-    "test": "jest",
+    "start": "cross-env NODE_ENV=development nodemon --exec ts-node src/index.ts",
+    "test-server": "cross-env NODE_ENV=test ts-node src/index.ts",
+    "test": "cross-env NODE_ENV=test jest",
     "gen-schema-types": "gql2ts src/schema.graphql -o src/types/schema.d.ts"
   },
   "jest": {

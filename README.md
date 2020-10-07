@@ -34,3 +34,9 @@ users 테이블에 email, password를 mutation함
 
 yarn test 할 때 securityerror: localstorage is not available for opaque origins at window.get localstorage [as localstorage]
 -> jest 버전을 24.9.0로 올려서 해결
+
+# Part 4
+
+NODE_ENV'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다
+-> cross-env package 설치 후 package.json의 scripts에서 "test-server": "cross-env NODE_ENV=test ts-node src/index.ts"로 변경
