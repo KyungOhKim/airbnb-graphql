@@ -45,3 +45,22 @@ NODE_ENV'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램
 
 Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
 -> package.json의 scripts에서 "test": "cross-env NODE_ENV=test jest --detectOpenHandles"로 변경
+
+# Part 6
+
+src/modules/tmp/schema.graphql
+
+type Query {
+hello(name: String): String!
+}
+
+src/modules/tmp/resolvers.ts
+
+import { ResolverMap } from "../../types/graphql-utils";
+
+export const resolvers: ResolverMap = {
+Query: {
+hello: (\_, { name }: GQL.IHelloOnQueryArguments) =>
+`Bye ${name || "World"}`,
+},
+};
