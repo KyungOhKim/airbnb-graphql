@@ -64,3 +64,8 @@ hello: (\_, { name }: GQL.IHelloOnQueryArguments) =>
 `Bye ${name || "World"}`,
 },
 };
+
+# Part 9
+
+Returning a Promise from "describe" is not supported. Tests must be defined synchronously.
+-> describe("Register user", () => {})로 변경
