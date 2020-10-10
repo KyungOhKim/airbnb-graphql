@@ -69,3 +69,8 @@ hello: (\_, { name }: GQL.IHelloOnQueryArguments) =>
 
 Returning a Promise from "describe" is not supported. Tests must be defined synchronously.
 -> describe("Register user", () => {})로 변경
+
+# Part 11
+
+Warning: no config file specified, using the default config.
+-> redis-cli ping -> PONG 반환 후 redis-cli shutdown 실행 -> redis 종료 후 redis-server 실행
