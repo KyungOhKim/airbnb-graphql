@@ -84,3 +84,11 @@ SPARKPOST_API_KEY=sparkpost에서 sign up하고 만든 api key
 terminal에서 redis-server 실행 후 terminal을 하나 더 열어서 yarn start
 
 https://10minutemail.net/?lang=ko 에 나오는 임의의 email 주소로 playground에서 mutation register하고 메일이 오는 것을 확인 -> confirm email을 클릭하면 페이지 이동 후 ok가 보이고 새로고침 하면 invalid가 보임(pgadmin에서 users 테이블을 보면 confirmed 필드가 false에서 true로 변경됨)
+
+# Part 15
+
+TSError: ⨯ Unable to compile TypeScript
+src\startServer.ts (10,33): Argument of type 'typeof session' is not assignable to parameter
+of type '(options?: SessionOptions | undefined) => RequestHandler<ParamsDictionary, any, any, Par
+sedQs>'.
+-> 나중 Part에서 해결 예정
