@@ -92,3 +92,7 @@ src\startServer.ts (10,33): Argument of type 'typeof session' is not assignable 
 of type '(options?: SessionOptions | undefined) => RequestHandler<ParamsDictionary, any, any, Par
 sedQs>'.
 -> 나중 Part에서 해결 예정
+
+# Part 16
+
+@types/express-session 버전을 1.15.16로 변경하여 Part 15의 TSError를 해결
