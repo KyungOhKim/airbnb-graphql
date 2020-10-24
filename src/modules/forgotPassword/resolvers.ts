@@ -11,6 +11,9 @@ const errorResponse = [
   },
 ];
 
+// 20 minutes
+// lock account
+
 export const resolvers: ResolverMap = {
   Query: {
     dummy2: () => "bye",
