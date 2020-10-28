@@ -96,3 +96,17 @@ sedQs>'.
 # Part 16
 
 @types/express-session 버전을 1.15.16로 변경하여 Part 15의 TSError를 해결
+
+# Part 26
+
+https://apps.twitter.com/ 에서 app 생성(http://hleecaster.com/twitter-api-developer/ 참고)
+
+27_twitter_oauth branch 생성
+
+.env
+
+TWITTER_CONSUMER_KEY= API key 입력
+TWITTER_CONSUMER_SECRET=API key secret 입력
+
+redis-server 실행하고 yarn start하여 localhost:4000/auth/twitter 를 입력하면 Twitter OAuth되고 localhost:4000 으로 리디렉션 됨
+pgAdmin에서 airbnb_graphql DB의 user 테이블에 id, email, twitterId 등이 생성됨
