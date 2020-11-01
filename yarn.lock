@@ -238,6 +238,13 @@
     "@gql2ts/util" "^1.9.0"
     humps "^2.0.0"
 
+"@gql2ts/types@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@gql2ts/types/-/types-1.8.0.tgz#ee20fa55b157352b4a96ba647c1d3e1c0b0b4184"
+  integrity sha512-j7oiwcf0GC3+uAi31+w75iD9JwCyNZfjrqAaue2jSs3pRD9KA5/8OUfz1jUShxuPb2HVD01Kfm2kvgL6buR0+Q==
+  dependencies:
+    "@gql2ts/util" "^1.8.0"
+
 "@gql2ts/util@^1.7.2", "@gql2ts/util@^1.8.0", "@gql2ts/util@^1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@gql2ts/util/-/util-1.9.0.tgz#d07a54832757d2f2d1fc9891e5b0e3e3b4886c6a"
@@ -605,10 +612,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.11.2.tgz#2de1ed6670439387da1c9f549a2ade2b0a799256"
   integrity sha512-jiE3QIxJ8JLNcb1Ps6rDbysDhN4xa8DJJvuC9prr6w+1tIh+QAbYyNF3tyiZNLDBIuBCf4KEcV2UvQm/V60xfA==
 
-"@types/node@9.6.6":
-  version "9.6.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.6.tgz#439b91f9caf3983cad2eef1e11f6bedcbf9431d2"
-  integrity sha512-SJe0g5cZeGNDP5sD8mIX3scb+eq8LQQZ60FXiKZHipYSeEFZ5EKml+NNMiO76F74TY4PoMWlNxF/YRY40FOvZQ==
+"@types/node@10.11.0":
+  version "10.11.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.11.0.tgz#ddd0d67a3b6c3810dd1a59e36675fa82de5e19ae"
+  integrity sha512-R4Dvw6KjSYn/SpvjRchBOwXr14vVVcFXCtnM3f0aLvlJS8a599rrcEoihcP2/+Z/f75E5GNPd4aWM7j1yei9og==
 
 "@types/node@^9.4.6":
   version "9.6.59"
@@ -681,6 +688,14 @@
   resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-3.4.3.tgz#121ace265f5569ce40f4f6d0ff78a338c732a754"
   integrity sha512-5fRLCYhLtDb3hMWqQyH10qtF+Ud2JnNCXTCZ+9ktNdCcgslcuXkDTkFcJNk++MT29yDntDnlF1+jD+uVGumsbw==
   dependencies:
+    "@types/node" "*"
+
+"@types/ws@5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@types/ws/-/ws-5.1.2.tgz#f02d3b1cd46db7686734f3ce83bdf46c49decd64"
+  integrity sha512-NkTXUKTYdXdnPE2aUUbGOXE1XfMK527SCvU/9bj86kyFF6kZ9ZnOQ3mK5jADn98Y2vEUD/7wKDgZa7Qst2wYOg==
+  dependencies:
+    "@types/events" "*"
     "@types/node" "*"
 
 "@types/yargs-parser@*":
@@ -1858,14 +1873,6 @@ cross-env@5.2.0:
     cross-spawn "^6.0.5"
     is-windows "^1.0.0"
 
-cross-fetch@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-2.0.0.tgz#a17475449561e0f325146cea636a8619efb9b382"
-  integrity sha512-gnx0GnDyW73iDq6DpqceL8i4GGn55PPKDzNwZkopJ3mKPcfJ0BUIXBsnYfJBVw+jFDB+hzIp2ELNRdqoxN6M3w==
-  dependencies:
-    node-fetch "2.0.0"
-    whatwg-fetch "2.0.3"
-
 cross-fetch@2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-2.2.2.tgz#a47ff4f7fc712daba8f6a695a11c948440d45723"
@@ -2916,13 +2923,6 @@ graphql-playground-middleware-lambda@1.5.0:
   integrity sha512-81qIFbs2T7oznA9wYjx7HV/tOCZOEbjqEwGelIfxL5oxlHFUqL67Z0TbpOCk02S13s0JIcIiH+R7YVBr+WYuxQ==
   dependencies:
     graphql-playground-html "1.5.5"
-
-graphql-request@1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/graphql-request/-/graphql-request-1.5.1.tgz#cccdf5cce6432ca062b90f7b63793c77c821ff9a"
-  integrity sha512-p1f1q+D+5k1PMxsaZszestYW1BAEKjygliqTAhJI5nueRe74WRmwNQWAdrRBoCFRIpM0SZer98cbJF4PZHXaqg==
-  dependencies:
-    cross-fetch "2.0.0"
 
 graphql-request@^1.4.0:
   version "1.8.2"
@@ -4744,11 +4744,6 @@ nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
-
-node-fetch@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.0.0.tgz#982bba43ecd4f2922a29cc186a6bbb0bb73fcba6"
-  integrity sha1-mCu6Q+zU8pIqKcwYamu7C7c/y6Y=
 
 node-fetch@2.1.2:
   version "2.1.2"
@@ -6580,10 +6575,10 @@ typeorm@0.2.21:
     yargonaut "^1.1.2"
     yargs "^13.2.1"
 
-typescript@2.8.3:
-  version "2.8.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.8.3.tgz#5d817f9b6f31bb871835f4edf0089f21abe6c170"
-  integrity sha512-K7g15Bb6Ra4lKf7Iq2l/I5/En+hLIHmxWZGq3D4DIRNFxMNV6j2SHSvDOqs2tGd4UvD/fJvrwopzQXjLrT7Itw==
+typescript@2.9.1:
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.1.tgz#fdb19d2c67a15d11995fd15640e373e09ab09961"
+  integrity sha512-h6pM2f/GDchCFlldnriOhs1QHuwbnmj6/v7499eMHqPeW4V2G0elua2eIc2nu8v2NdHV0Gm+tzX83Hr6nUFjQA==
 
 uid-safe@~2.1.5:
   version "2.1.5"
@@ -6774,11 +6769,6 @@ whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3:
   integrity sha512-b5lim54JOPN9HtzvK9HFXvBma/rnfFeqsic0hSpjtDbVxR3dJKLc+KB4V6GgiGOvl7CY/KNh8rxSo9DKQrnUEw==
   dependencies:
     iconv-lite "0.4.24"
-
-whatwg-fetch@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
-  integrity sha1-nITsLc9oGH/wC8ZOEnS0QhduHIQ=
 
 whatwg-fetch@2.0.4:
   version "2.0.4"

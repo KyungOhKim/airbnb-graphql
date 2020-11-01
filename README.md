@@ -100,3 +100,6 @@ sedQs>'.
 # Part 30
 
 npx jest --no--cache --detectOpenHandles를 terminal에 입력하여 테스트함
+
+module '"net"' has no exported member 'addressinfo'
+-> @types/node 버전을 10.11.0로 변경하여 해결
