@@ -6,6 +6,7 @@ import { createTestConn } from "../../../testUtils/createTestConn";
 
 let userId: string;
 let conn: Connection;
+faker.seed(Date.now() + 2);
 const email = faker.internet.email();
 const password = faker.internet.password();
 

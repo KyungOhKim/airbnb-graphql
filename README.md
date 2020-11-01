@@ -96,3 +96,7 @@ sedQs>'.
 # Part 16
 
 @types/express-session 버전을 1.15.16로 변경하여 Part 15의 TSError를 해결
+
+# Part 30
+
+npx jest --no--cache --detectOpenHandles를 terminal에 입력하여 테스트함
